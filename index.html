@@ -345,6 +345,7 @@ p:last-child { margin-bottom: 0; }
 .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; }
 .site-footer a { color: #fff; text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; color: #fff; }
+.site-footer .foot-links { display: inline-flex; gap: 10px; flex-wrap: wrap; }
 .site-footer .press { font-family: var(--title); letter-spacing: .1em; color: #fff; }
 </style>
 </head>
@@ -538,7 +539,7 @@ p:last-child { margin-bottom: 0; }
 <footer class="site-footer">
   <div class="wrap">
     <span>© <span id="year">2026</span> Tyler Wickstrom · Published by <span class="press">Wicked Tricks Press</span></span>
-    <a href="#top">Back to top ↑</a>
+    <span class="foot-links"><a class="js-email" data-u="wickedtrickspress" data-d="gmail.com" data-label="Spot a problem?" data-subject="Website problem">Spot a problem?</a> <span aria-hidden="true">·</span> <a href="#top">Back to top ↑</a></span>
   </div>
 </footer>
 
@@ -631,12 +632,13 @@ p:last-child { margin-bottom: 0; }
     var toast = document.getElementById('email-toast'), toastTimer;
     document.querySelectorAll('.js-email').forEach(function (el) {
       var addr = el.dataset.u + '@' + el.dataset.d;
-      el.href = 'mailto:' + addr;
+      var subj = el.dataset.subject ? encodeURIComponent(el.dataset.subject) : '';
+      el.href = 'mailto:' + addr + (subj ? '?subject=' + subj : '');
       if (!el.dataset.label) el.textContent = addr;
       el.addEventListener('click', function () {
         var done = function (copied) {
           toast.querySelector('.msg').textContent = copied ? 'Email address copied: ' + addr : addr;
-          toast.querySelector('.gmail').href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(addr);
+          toast.querySelector('.gmail').href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(addr) + (subj ? '&su=' + subj : '');
           toast.hidden = false;
           clearTimeout(toastTimer); toastTimer = setTimeout(function () { toast.hidden = true; }, 9000);
         };
