@@ -330,9 +330,10 @@ p:last-child { margin-bottom: 0; }
 .connect .btn-row { justify-content: center; }
 
 /* Newsletter sign-up (MailerLite). Their script needs the ml-* class names; the look is ours. */
-.news { max-width: 520px; margin: 48px auto 0; padding-top: 40px; border-top: 1px solid var(--rule); }
-.news h3 { margin-bottom: 10px; }
-.news .news-copy { color: var(--ink-soft); margin: 0 auto 22px; max-width: 44ch; }
+.news { max-width: 520px; margin: 0 auto; }
+.news .news-thanks { font-family: var(--title); font-size: 24px; color: var(--red); margin: 24px 0 0; }
+.reach { max-width: 520px; margin: 40px auto 0; padding-top: 32px; border-top: 1px solid var(--rule); color: var(--ink-soft); font-size: .95em; }
+.reach p { margin-bottom: 18px; }
 .news .news-row { display: flex; gap: 10px; }
 .news .ml-field-group { flex: 1; }
 .news input[type=email] { width: 100%; box-sizing: border-box; min-height: 48px; padding: 0 14px; border: 1.5px solid var(--rule); border-radius: 2px; background: #fff; color: var(--ink); font: 17px var(--serif); }
@@ -345,7 +346,6 @@ p:last-child { margin-bottom: 0; }
 .news .ml-form-embedSubmitLoad { display: inline-block; width: 16px; height: 16px; border-radius: 50%; border: 3px solid #fff; border-color: #fff #fff #fff transparent; animation: news-spin 1.2s linear infinite; }
 @keyframes news-spin { to { transform: rotate(360deg); } }
 .news .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
-.news .row-success h3 { color: var(--red); }
 @media (max-width: 480px) {
   .news .news-row { flex-direction: column; }
   .news .ml-form-embedSubmit button { width: 100%; }
@@ -528,17 +528,9 @@ p:last-child { margin-bottom: 0; }
     <div class="wrap">
       <p class="eyebrow">Connect</p>
       <h2 id="connect-title">Stay in touch</h2>
-      <p class="lede">For events, book clubs, interviews, or just to say you finished the book, email <a class="js-email" data-u="wickedtrickspress" data-d="gmail.com">wickedtrickspress [at] gmail.com</a>. You can also connect on LinkedIn, or add <cite>Kain</cite> to your Want to Read shelf on Goodreads.</p>
-      <div class="btn-row">
-        <a class="btn btn-solid js-email" data-u="wickedtrickspress" data-d="gmail.com" data-label="Email">Email</a>
-        <a class="btn btn-line" href="https://www.linkedin.com/in/tyler-wickstrom" rel="noopener">LinkedIn</a>
-        <a class="btn btn-line" href="https://www.goodreads.com/book/show/261754569-kain-and-the-book-of-keepings" rel="noopener">Goodreads</a>
-      </div>
-
       <div class="news ml-form-embedContainer ml-subscribe-form ml-subscribe-form-48841053" id="mlb2-48841053">
         <div class="ml-form-embedBody row-form">
-          <h3>Stay in the loop</h3>
-          <p class="news-copy">News on <cite>Kain and the Book of Keepings</cite>, upcoming events, and what Wicked Tricks Press is cooking up next. No spam. Unsubscribe anytime.</p>
+          <p class="lede">Get news on <cite>Kain and the Book of Keepings</cite>, upcoming events, and what Wicked Tricks Press is cooking up next. No spam. Unsubscribe anytime.</p>
           <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2812609/forms/204686239595497162/subscribe" data-code="" method="post" target="_blank">
             <div class="news-row">
               <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
@@ -557,8 +549,15 @@ p:last-child { margin-bottom: 0; }
           </form>
         </div>
         <div class="ml-form-successBody row-success" style="display:none" role="status">
-          <h3>Thank you!</h3>
-          <p class="news-copy">You're on the list. Watch your inbox for news from Wicked Tricks Press.</p>
+          <p class="news-thanks">Thank you! You're on the list.</p>
+        </div>
+      </div>
+      <div class="reach">
+        <p>For events, book clubs, interviews, or just to say you finished the book, email <a class="js-email" data-u="wickedtrickspress" data-d="gmail.com">wickedtrickspress [at] gmail.com</a>.</p>
+        <div class="btn-row">
+          <a class="btn btn-line js-email" data-u="wickedtrickspress" data-d="gmail.com" data-label="Email">Email</a>
+          <a class="btn btn-line" href="https://www.linkedin.com/in/tyler-wickstrom" rel="noopener">LinkedIn</a>
+          <a class="btn btn-line" href="https://www.goodreads.com/book/show/261754569-kain-and-the-book-of-keepings" rel="noopener">Goodreads</a>
         </div>
       </div>
     </div>
