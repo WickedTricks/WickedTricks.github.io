@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Tyler Wickstrom · Author &amp; Game Designer</title>
-<meta name="description" content="Tyler Wickstrom writes at the intersection of religious systems, mythology, and epic adventure. Author of Kain and the Book of Keepings and designer of the card game Idiomantics.">
+<title>Wicked Tricks Press · Books &amp; Games by Tyler Wickstrom</title>
+<meta name="description" content="Wicked Tricks Press: books and games by author and game designer Tyler Wickstrom, from Vancouver, WA. Home of Kain and the Book of Keepings and the card game Idiomantics.">
 <link rel="canonical" href="https://wickedtrickspress.com/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
@@ -12,7 +12,7 @@
 <meta name="theme-color" content="#13203A">
 
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Tyler Wickstrom">
+<meta property="og:site_name" content="Wicked Tricks Press">
 <meta property="og:title" content="Tyler Wickstrom · Author of Kain and the Book of Keepings">
 <meta property="og:description" content="Myth, religion, and epic adventure. Kain and the Book of Keepings arrives December 2, 2026 in paperback and ebook. Ebook pre-orders are open now.">
 <meta property="og:url" content="https://wickedtrickspress.com/">
@@ -29,6 +29,15 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Organization",
+      "@id": "https://wickedtrickspress.com/#press",
+      "name": "Wicked Tricks Press",
+      "url": "https://wickedtrickspress.com/",
+      "logo": "https://wickedtrickspress.com/apple-touch-icon.png",
+      "slogan": "A little mischief, a much bigger world.",
+      "founder": { "@id": "https://wickedtrickspress.com/#tyler" }
+    },
+    {
       "@type": "Person",
       "@id": "https://wickedtrickspress.com/#tyler",
       "name": "Tyler Wickstrom",
@@ -44,7 +53,7 @@
       "@type": "Book",
       "name": "Kain and the Book of Keepings",
       "author": { "@id": "https://wickedtrickspress.com/#tyler" },
-      "publisher": { "@type": "Organization", "name": "Wicked Tricks Press" },
+      "publisher": { "@id": "https://wickedtrickspress.com/#press" },
       "image": "https://wickedtrickspress.com/img/kain-cover-900.jpg",
       "bookFormat": ["https://schema.org/Paperback", "https://schema.org/EBook"],
       "datePublished": "2026-12-02"
@@ -187,12 +196,16 @@ p:last-child { margin-bottom: 0; }
 .hero h1 { font-size: clamp(46px, 6vw + 12px, 92px); line-height: .98; letter-spacing: .02em; margin-bottom: 22px; }
 .hero .lede { font-size: clamp(21px, 1vw + 16px, 26px); line-height: 1.45; color: var(--ink-soft); max-width: 30ch; margin-bottom: 28px; }
 .hero blockquote { margin: 0 0 34px; padding-left: 20px; border-left: 2px solid var(--red); font-style: italic; font-size: clamp(19px, .6vw + 16px, 22px); color: var(--ink); max-width: 38ch; }
-.portrait { position: relative; justify-self: end; width: 100%; max-width: 420px; }
+.emblem { justify-self: end; width: 100%; max-width: 380px; height: auto; }
+.hero .lede { max-width: none; }
+.hero-by { font-family: var(--label); font-weight: 600; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); margin: -6px 0 30px; }
+.hero-by a { color: var(--red); text-decoration: none; border-bottom: 1px solid currentColor; }
+.portrait { position: relative; display: block; width: 100%; max-width: 300px; margin: 0 18px 36px 0; }
 .portrait::before { content: ""; position: absolute; inset: 18px -18px -18px 18px; border: 1.5px solid var(--red); z-index: 0; }
 .portrait img { position: relative; z-index: 1; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
 @media (max-width: 820px) {
   .hero .wrap { grid-template-columns: 1fr; }
-  .portrait { justify-self: start; max-width: 280px; margin: 8px 18px 0 0; }
+  .emblem { justify-self: start; max-width: 160px; }
 }
 
 /* Featured book */
@@ -405,7 +418,7 @@ p:last-child { margin-bottom: 0; }
 
 <header class="site-header">
   <div class="wrap">
-    <a class="wordmark" href="#top">Tyler Wickstrom</a>
+    <a class="wordmark" href="#top">Wicked Tricks Press</a>
     <nav class="nav" aria-label="Main">
       <a href="#books">Books</a>
       <a href="#games">Games</a>
@@ -421,19 +434,16 @@ p:last-child { margin-bottom: 0; }
   <section class="hero" id="top">
     <div class="wrap">
       <div>
-        <p class="eyebrow">Author &amp; game designer</p>
-        <h1>Tyler<br>Wickstrom</h1>
-        <p class="lede">Stories at the intersection of religious systems, mythology, and epic adventure.</p>
-        <blockquote>If we become the stories we tell ourselves, we craft not only our marvels, but our monsters too.</blockquote>
+        <p class="eyebrow">Books &amp; games · Vancouver, WA</p>
+        <h1>Wicked Tricks<br>Press</h1>
+        <p class="lede">A little mischief, a much bigger world.</p>
+        <p class="hero-by">Founded by author &amp; game designer <a href="#about">Tyler Wickstrom</a></p>
         <div class="btn-row">
           <a class="btn btn-solid" href="#books">Read Kain</a>
-          <a class="btn btn-line" href="#events">Upcoming events</a>
+          <a class="btn btn-line" href="#games">Meet Idiomantics</a>
         </div>
       </div>
-      <picture class="portrait">
-        <source type="image/webp" srcset="img/tyler-wickstrom-480.webp 480w, img/tyler-wickstrom-960.webp 960w" sizes="(max-width: 820px) 340px, 420px">
-        <img src="img/tyler-wickstrom-960.jpg" srcset="img/tyler-wickstrom-480.jpg 480w, img/tyler-wickstrom-960.jpg 960w" sizes="(max-width: 820px) 340px, 420px" width="960" height="1200" alt="Portrait of Tyler Wickstrom in a pink blazer against a dark brick wall">
-      </picture>
+      <img class="emblem" src="img/wt-emblem.svg" width="420" height="420" alt="Wicked Tricks Press emblem: the letters WT with horns and a crescent moon">
     </div>
   </section>
 
@@ -563,12 +573,15 @@ p:last-child { margin-bottom: 0; }
         <p class="eyebrow">About</p>
         <h2 id="about-title">Wicked Tricks Press</h2>
         <p class="press-lede">We play wicked tricks on people. The punchline is always the same: the world is bigger, stranger and more connected than you thought.</p>
-        <p class="press-sub">Books and games from Vancouver, WA</p>
       </div>
 
       <div class="people">
         <article class="person" aria-labelledby="tyler-name">
           <div class="person-meta">
+            <picture class="portrait">
+              <source type="image/webp" srcset="img/tyler-wickstrom-480.webp 480w, img/tyler-wickstrom-960.webp 960w" sizes="300px">
+              <img src="img/tyler-wickstrom-960.jpg" srcset="img/tyler-wickstrom-480.jpg 480w, img/tyler-wickstrom-960.jpg 960w" sizes="300px" width="960" height="1200" alt="Portrait of Tyler Wickstrom in a pink blazer against a dark brick wall" loading="lazy">
+            </picture>
             <p class="person-role">Founder</p>
             <h3 id="tyler-name">Tyler Wickstrom</h3>
             <ul class="facts">
@@ -648,7 +661,7 @@ p:last-child { margin-bottom: 0; }
 
 <footer class="site-footer">
   <div class="wrap">
-    <span>© <span id="year">2026</span> Tyler Wickstrom · Published by <span class="press">Wicked Tricks Press</span> · <em class="tagline">A little mischief, a much bigger world.</em></span>
+    <span>© <span id="year">2026</span> <span class="press">Wicked Tricks Press</span> · Books &amp; games by Tyler Wickstrom</span>
     <span class="foot-links"><a class="js-email" data-u="wickedtrickspress" data-d="gmail.com" data-label="Spot a problem?" data-subject="Website problem">Spot a problem?</a> <span aria-hidden="true">·</span> <a href="#top">Back to top ↑</a></span>
   </div>
 </footer>
