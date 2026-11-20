@@ -326,6 +326,20 @@ p:last-child { margin-bottom: 0; }
 
 /* Connect */
 .connect { background: var(--paper-2); text-align: center; }
+
+/* About the press */
+.press-note { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--rule); }
+.press-note h3 { font-size: 20px; margin-bottom: 10px; }
+.press-note p { color: var(--ink-soft); font-size: 17px; line-height: 1.6; }
+.about .bio .press-note p::first-letter { all: unset; }
+/* Coming next */
+.next { background: var(--night); color: #fff; text-align: center; }
+.next .eyebrow { color: var(--moon); }
+.next .tm { font-family: var(--label); font-size: .35em; vertical-align: super; margin-left: 2px; }
+.next .lede { max-width: 44ch; margin: 14px auto 22px; color: rgba(255,255,255,.82); }
+.next-link { font-family: var(--label); font-weight: 600; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--moon); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 3px; }
+.next-link:hover { color: #fff; }
+.site-footer .tagline { font-style: italic; }
 .connect .lede { max-width: 46ch; margin: 14px auto 30px; color: var(--ink-soft); }
 .connect .btn-row { justify-content: center; }
 
@@ -520,7 +534,20 @@ p:last-child { margin-bottom: 0; }
       <div class="bio">
         <p>Tyler Wickstrom writes at the intersection of religious systems, mythology, and epic adventure. A former campus staff minister turned sustainability engineer turned creator, they believe that if we become the stories we tell ourselves, we craft not only our marvels, but our monsters too.</p>
         <p>They co-host a local <a href="https://www.shutupwrite.com/series/id2uL4qXqB00" rel="noopener">Shut Up &amp; Write!</a> writing group and enjoy exploring the West Coast they call home.</p>
+        <div class="press-note">
+          <h3>About Wicked Tricks Press</h3>
+          <p>We play wicked tricks on people. The punchline is always the same: the world is bigger, stranger and more connected than you thought. Books and games from Vancouver, WA.</p>
+        </div>
       </div>
+    </div>
+  </section>
+
+  <section class="section next on-dark" id="next" aria-labelledby="next-title">
+    <div class="wrap">
+      <p class="eyebrow">Coming from Wicked Tricks Press</p>
+      <h2 id="next-title">Idiomantics<span class="tm">™</span></h2>
+      <p class="lede">A bluffing card game built on real idioms from around the world. Funny, social, and you learn something along the way.</p>
+      <a class="next-link" href="#connect">Want early news? Join the list ↓</a>
     </div>
   </section>
 
@@ -530,7 +557,7 @@ p:last-child { margin-bottom: 0; }
       <h2 id="connect-title">Stay in touch</h2>
       <div class="news ml-form-embedContainer ml-subscribe-form ml-subscribe-form-48841053" id="mlb2-48841053">
         <div class="ml-form-embedBody row-form">
-          <p class="lede">Get news on <cite>Kain and the Book of Keepings</cite>, upcoming events, and what Wicked Tricks Press is cooking up next. No spam. Unsubscribe anytime.</p>
+          <p class="lede">Get news on <cite>Kain and the Book of Keepings</cite>, upcoming events, and the next wicked trick up our sleeve. No spam. Unsubscribe anytime.</p>
           <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2812609/forms/204686239595497162/subscribe" data-code="" method="post" target="_blank">
             <div class="news-row">
               <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
@@ -586,7 +613,7 @@ p:last-child { margin-bottom: 0; }
 
 <footer class="site-footer">
   <div class="wrap">
-    <span>© <span id="year">2026</span> Tyler Wickstrom · Published by <span class="press">Wicked Tricks Press</span></span>
+    <span>© <span id="year">2026</span> Tyler Wickstrom · Published by <span class="press">Wicked Tricks Press</span> · <em class="tagline">A little mischief, a much bigger world.</em></span>
     <span class="foot-links"><a class="js-email" data-u="wickedtrickspress" data-d="gmail.com" data-label="Spot a problem?" data-subject="Website problem">Spot a problem?</a> <span aria-hidden="true">·</span> <a href="#top">Back to top ↑</a></span>
   </div>
 </footer>
