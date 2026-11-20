@@ -336,6 +336,10 @@ p:last-child { margin-bottom: 0; }
 /* Games */
 .games { background: var(--paper-2); text-align: center; }
 .games .tm { font-family: var(--label); font-size: .35em; vertical-align: super; margin-left: 2px; }
+.games-title { position: relative; display: inline-block; max-width: 560px; width: 100%; }
+.games-title img { display: block; width: 100%; height: auto; }
+.games-title .tm { position: absolute; right: -6px; top: 34%; color: var(--ink); }
+.games-globe { display: block; width: clamp(170px, 22vw, 240px); height: auto; margin: -6px auto 0; }
 .games .status { display: inline-block; margin: 16px 0 0; padding: 5px 12px; border: 1px solid var(--rule); border-radius: 999px; background: var(--paper); font-family: var(--label); font-weight: 600; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-soft); }
 .games .lede { max-width: 44ch; margin: 18px auto 22px; color: var(--ink-soft); }
 .next-link { font-family: var(--label); font-weight: 600; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--red); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 3px; }
@@ -483,7 +487,8 @@ p:last-child { margin-bottom: 0; }
   <section class="section games" id="games" aria-labelledby="games-title">
     <div class="wrap">
       <p class="eyebrow">Games</p>
-      <h2 id="games-title">Idiomantics<span class="tm">™</span></h2>
+      <h2 id="games-title" class="games-title"><img src="img/idiomantics-title.svg" width="1483" height="673" alt="Idiomantics"><span class="tm">™</span></h2>
+      <img class="games-globe" src="img/idiomantics-globe.svg" width="512" height="512" alt="">
       <p class="status">In playtesting</p>
       <p class="lede">A bluffing card game built on real idioms from around the world. Funny, social, and you learn something along the way.</p>
       <a class="next-link" href="#connect">Want early news? Join the list ↓</a>
