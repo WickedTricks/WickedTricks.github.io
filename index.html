@@ -191,12 +191,13 @@ p:last-child { margin-bottom: 0; }
 
 /* Hero */
 .hero { padding-block: clamp(48px, 8vw, 104px) clamp(56px, 8vw, 112px); }
-.hero .wrap { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(32px, 6vw, 88px); align-items: center; }
+.hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(32px, 6vw, 88px); align-items: center; }
 .hero h1 { font-size: clamp(46px, 6vw + 12px, 92px); line-height: .98; letter-spacing: .02em; margin-bottom: 22px; }
 .hero .lede { font-size: clamp(21px, 1vw + 16px, 26px); line-height: 1.45; color: var(--ink-soft); max-width: 30ch; margin-bottom: 28px; }
 .hero blockquote { margin: 0 0 34px; padding-left: 20px; border-left: 2px solid var(--red); font-style: italic; font-size: clamp(19px, .6vw + 16px, 22px); color: var(--ink); max-width: 38ch; }
 .emblem { justify-self: center; width: 100%; max-width: 260px; height: auto; }
 .hero .lede { max-width: none; }
+@media (min-width: 821px) { .hero h1 { white-space: nowrap; font-size: clamp(40px, 4.6vw, 68px); } .emblem { max-width: 220px; } }
 .hero-by { font-family: var(--label); font-weight: 600; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); margin: 4px 0 30px; }
 .hero-by a { color: var(--red); text-decoration: none; border-bottom: 1px solid currentColor; }
 .portrait { position: relative; display: block; width: 100%; max-width: 300px; margin: 0 18px 36px 0; }
@@ -434,7 +435,7 @@ p:last-child { margin-bottom: 0; }
     <div class="wrap">
       <div>
         <p class="eyebrow">Books &amp; games · Vancouver, WA</p>
-        <h1>Wicked Tricks<br>Press</h1>
+        <h1>Wicked Tricks Press</h1>
         <p class="hero-by">Founded by author &amp; game designer <a href="#about">Tyler Wickstrom</a></p>
         <div class="btn-row">
           <a class="btn btn-solid" href="#books">Read Kain</a>
