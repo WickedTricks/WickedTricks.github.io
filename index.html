@@ -329,6 +329,29 @@ p:last-child { margin-bottom: 0; }
 .connect .lede { max-width: 46ch; margin: 14px auto 30px; color: var(--ink-soft); }
 .connect .btn-row { justify-content: center; }
 
+/* Newsletter sign-up (MailerLite). Their script needs the ml-* class names; the look is ours. */
+.news { max-width: 520px; margin: 48px auto 0; padding-top: 40px; border-top: 1px solid var(--rule); }
+.news h3 { margin-bottom: 10px; }
+.news .news-copy { color: var(--ink-soft); margin: 0 auto 22px; max-width: 44ch; }
+.news .news-row { display: flex; gap: 10px; }
+.news .ml-field-group { flex: 1; }
+.news input[type=email] { width: 100%; box-sizing: border-box; min-height: 48px; padding: 0 14px; border: 1.5px solid var(--rule); border-radius: 2px; background: #fff; color: var(--ink); font: 17px var(--serif); }
+.news input[type=email]:focus { outline: none; border-color: var(--ink); }
+.news .ml-error input[type=email] { border-color: var(--red-bright); }
+.news .ml-form-embedSubmit button { cursor: pointer; white-space: nowrap; }
+.news .ml-form-embedSubmit button.loading { display: none; }
+.news .ml-form-recaptcha { display: flex; justify-content: center; margin-top: 16px; min-height: 78px; }
+.news .ml-form-recaptcha.ml-error iframe { outline: 1px solid var(--red-bright); }
+.news .ml-form-embedSubmitLoad { display: inline-block; width: 16px; height: 16px; border-radius: 50%; border: 3px solid #fff; border-color: #fff #fff #fff transparent; animation: news-spin 1.2s linear infinite; }
+@keyframes news-spin { to { transform: rotate(360deg); } }
+.news .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+.news .row-success h3 { color: var(--red); }
+@media (max-width: 480px) {
+  .news .news-row { flex-direction: column; }
+  .news .ml-form-embedSubmit button { width: 100%; }
+  .news .g-recaptcha { transform: scale(.9); transform-origin: center top; }
+}
+
 /* Email notice */
 .toast { position: fixed; left: 50%; bottom: max(20px, env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 90;
   display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center;
@@ -511,6 +534,33 @@ p:last-child { margin-bottom: 0; }
         <a class="btn btn-line" href="https://www.linkedin.com/in/tyler-wickstrom" rel="noopener">LinkedIn</a>
         <a class="btn btn-line" href="https://www.goodreads.com/book/show/261754569-kain-and-the-book-of-keepings" rel="noopener">Goodreads</a>
       </div>
+
+      <div class="news ml-form-embedContainer ml-subscribe-form ml-subscribe-form-48841053" id="mlb2-48841053">
+        <div class="ml-form-embedBody row-form">
+          <h3>Stay in the loop</h3>
+          <p class="news-copy">News on <cite>Kain and the Book of Keepings</cite>, upcoming events, and what Wicked Tricks Press is cooking up next. No spam. Unsubscribe anytime.</p>
+          <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2812609/forms/204686239595497162/subscribe" data-code="" method="post" target="_blank">
+            <div class="news-row">
+              <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                <input aria-label="Email address" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="Your email" autocomplete="email">
+              </div>
+              <div class="ml-form-embedSubmit">
+                <button type="submit" class="btn btn-solid primary">Count me in</button>
+                <button disabled type="button" class="btn btn-solid loading" style="display:none"><span class="ml-form-embedSubmitLoad"></span><span class="sr-only">Sending…</span></button>
+              </div>
+            </div>
+            <div class="ml-form-recaptcha ml-validate-required">
+              <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
+            </div>
+            <input type="hidden" name="ml-submit" value="1">
+            <input type="hidden" name="anticsrf" value="true">
+          </form>
+        </div>
+        <div class="ml-form-successBody row-success" style="display:none" role="status">
+          <h3>Thank you!</h3>
+          <p class="news-copy">You're on the list. Watch your inbox for news from Wicked Tricks Press.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -673,5 +723,15 @@ p:last-child { margin-bottom: 0; }
   })();
 </script>
 <!-- Cloudflare Web Analytics (cookie-free page-view counts) --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3544b889e7964173a315bc215734b2fe"}'></script><!-- End Cloudflare Web Analytics -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+  function ml_webform_success_48841053() {
+    var $ = window.ml_jQuery || window.jQuery;
+    $('.ml-subscribe-form-48841053 .row-success').show();
+    $('.ml-subscribe-form-48841053 .row-form').hide();
+  }
+</script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519"></script>
+<script>fetch("https://assets.mailerlite.com/jsonp/2812609/forms/204686239595497162/takel").catch(function(){});</script>
 </body>
 </html>
