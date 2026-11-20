@@ -173,6 +173,7 @@ p:last-child { margin-bottom: 0; }
 .nav { display: flex; gap: clamp(14px, 2.4vw, 32px); }
 .nav a { font-family: var(--label); font-weight: 600; font-size: 12.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink); text-decoration: none; padding: 6px 0; border-bottom: 1.5px solid transparent; }
 .nav a:hover { border-bottom-color: var(--red); color: var(--ink); }
+@media (max-width: 520px) { .site-header .nav { gap: 0; width: 100%; justify-content: space-between; } .site-header .nav a { font-size: 11px; letter-spacing: .1em; } }
 @media (max-width: 640px) {
   .site-header .wrap { height: auto; padding-block: 12px 10px; flex-direction: column; gap: 6px; }
   .nav { gap: 20px; }
@@ -332,13 +333,13 @@ p:last-child { margin-bottom: 0; }
 .press-note h3 { font-size: 20px; margin-bottom: 10px; }
 .press-note p { color: var(--ink-soft); font-size: 17px; line-height: 1.6; }
 .about .bio .press-note p::first-letter { all: unset; }
-/* Coming next */
-.next { background: var(--night); color: #fff; text-align: center; }
-.next .eyebrow { color: var(--moon); }
-.next .tm { font-family: var(--label); font-size: .35em; vertical-align: super; margin-left: 2px; }
-.next .lede { max-width: 44ch; margin: 14px auto 22px; color: rgba(255,255,255,.82); }
-.next-link { font-family: var(--label); font-weight: 600; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--moon); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 3px; }
-.next-link:hover { color: #fff; }
+/* Games */
+.games { background: var(--paper-2); text-align: center; }
+.games .tm { font-family: var(--label); font-size: .35em; vertical-align: super; margin-left: 2px; }
+.games .status { display: inline-block; margin: 16px 0 0; padding: 5px 12px; border: 1px solid var(--rule); border-radius: 999px; background: var(--paper); font-family: var(--label); font-weight: 600; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-soft); }
+.games .lede { max-width: 44ch; margin: 18px auto 22px; color: var(--ink-soft); }
+.next-link { font-family: var(--label); font-weight: 600; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--red); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 3px; }
+.next-link:hover { color: var(--ink); }
 .site-footer .tagline { font-style: italic; }
 .connect .lede { max-width: 46ch; margin: 14px auto 30px; color: var(--ink-soft); }
 .connect .btn-row { justify-content: center; }
@@ -394,6 +395,7 @@ p:last-child { margin-bottom: 0; }
     <a class="wordmark" href="#top">Tyler Wickstrom</a>
     <nav class="nav" aria-label="Main">
       <a href="#books">Books</a>
+      <a href="#games">Games</a>
       <a href="#events">Events</a>
       <a href="#about">About</a>
       <a href="#connect">Connect</a>
@@ -478,6 +480,16 @@ p:last-child { margin-bottom: 0; }
     </div>
   </section>
 
+  <section class="section games" id="games" aria-labelledby="games-title">
+    <div class="wrap">
+      <p class="eyebrow">Games</p>
+      <h2 id="games-title">Idiomantics<span class="tm">™</span></h2>
+      <p class="status">In playtesting</p>
+      <p class="lede">A bluffing card game built on real idioms from around the world. Funny, social, and you learn something along the way.</p>
+      <a class="next-link" href="#connect">Want early news? Join the list ↓</a>
+    </div>
+  </section>
+
   <section class="section" id="events" aria-labelledby="events-title">
     <div class="wrap">
       <div class="section-head">
@@ -539,15 +551,6 @@ p:last-child { margin-bottom: 0; }
           <p>We play wicked tricks on people. The punchline is always the same: the world is bigger, stranger and more connected than you thought. Books and games from Vancouver, WA.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section next on-dark" id="next" aria-labelledby="next-title">
-    <div class="wrap">
-      <p class="eyebrow">Coming from Wicked Tricks Press</p>
-      <h2 id="next-title">Idiomantics<span class="tm">™</span></h2>
-      <p class="lede">A bluffing card game built on real idioms from around the world. Funny, social, and you learn something along the way.</p>
-      <a class="next-link" href="#connect">Want early news? Join the list ↓</a>
     </div>
   </section>
 
